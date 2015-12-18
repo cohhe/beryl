@@ -53,11 +53,14 @@ if (get_search_query() == '') {
 <div id="page" class="hfeed site">
 	<div id="main" class="site-main container">
 		<div class="post-pagination"><?php echo beryl_get_pagination( $GLOBALS['wp_query']->post_count ); ?></div>
-		<?php if ( $logo ) { ?>
-			<div class="site-logo">
+		<div class="site-logo <?php if ( !$logo ) { echo "text"; } ?>">
+			<?php if ( $logo ) { ?>
 				<img src="<?php echo $logo; ?>" alt="<?php _e('Site logo', 'beryl'); ?>">
-			</div>
-		<?php } ?>
+			<?php } else { ?>
+				<span class="blog-name"><?php bloginfo( 'name' ); ?></span>
+				<span class="blog-description"><?php bloginfo( 'description' ); ?></span>
+			<?php } ?>
+		</div>
 		<div class="navigation-icon">
 			<div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: hidden">
 				<svg width="1000px" height="1000px">

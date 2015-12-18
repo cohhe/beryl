@@ -291,6 +291,8 @@ function beryl_scripts() {
 
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.min.css', array() );
 
+	wp_enqueue_script( 'jquery.ba-hashchange', get_template_directory_uri() . '/js/jquery.ba-hashchange.js', array( 'jquery' ), '', true );
+
 	wp_enqueue_script( 'jquery-ui-draggable' );
 
 	wp_localize_script(
@@ -300,6 +302,8 @@ function beryl_scripts() {
 				'home_url' => home_url()
 			)
 	);
+
+	wp_add_inline_style( 'beryl-style', '.post-inner-title { background-image: url('.get_template_directory_uri().'/images/post-bg.png) !important; }' );
 }
 add_action( 'wp_enqueue_scripts', 'beryl_scripts' );
 

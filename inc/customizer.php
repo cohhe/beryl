@@ -30,6 +30,8 @@ function beryl_customize_register( $wp_customize ) {
 	// Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
 	$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title &amp; Tagline', 'beryl' );
 
+	$wp_customize->get_section( 'header_image' )->title = __( 'Logo', 'blogtheme' );
+
 	// Add General setting panel and configure settings inside it
 	$wp_customize->add_panel( 'beryl_general_panel', array(
 		'priority'       => 250,
@@ -37,26 +39,6 @@ function beryl_customize_register( $wp_customize ) {
 		'title'          => __( 'General settings' , 'beryl'),
 		'description'    => __( 'You can configure your general theme settings here' , 'beryl')
 	) );
-
-	// Scroll to top
-	$wp_customize->add_section( 'beryl_general_scrolltotop', array(
-		'priority'       => 30,
-		'capability'     => 'edit_theme_options',
-		'title'          => __( 'Scroll to top' , 'beryl'),
-		'description'    => __( 'Do you want to enable "Scroll to Top" button?' , 'beryl'),
-		'panel'          => 'beryl_general_panel'
-	) );
-
-	$wp_customize->add_setting( 'beryl_scrolltotop', array( 'sanitize_callback' => 'beryl_sanitize_checkbox' ) );
-
-	$wp_customize->add_control(
-		'beryl_scrolltotop',
-		array(
-			'label'      => 'Scroll to top',
-			'section'    => 'beryl_general_scrolltotop',
-			'type'       => 'checkbox',
-		)
-	);
 
 	// Social links
 	$wp_customize->add_section( new beryl_Customized_Section( $wp_customize, 'beryl_social_links', array(

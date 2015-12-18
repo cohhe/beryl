@@ -2,7 +2,7 @@
 Theme Name: Beryl
 Theme URI: http://cohhe.com/project-view/beryl/
 Author: Cohhe
-Author URI: http://cohhe.com/
+Author URI: https://cohhe.com/
 Description: Enhance your story experience, by leveraging the power of Beryl Wordpress Theme, built especially for telling great stories. It is the only free WordPress theme fully compatible with the Aesop Story Engine.
 Version: 1.0.0
 License: GNU General Public License v3
@@ -136,11 +136,11 @@ h6 {
 	color: #333;
 	display: block;
 	font-weight: normal;
-    line-height: 110%;
+	line-height: 110%;
 }
 
 h1 {
-    font-size: 48px;
+	font-size: 48px;
 	margin-bottom: 30px;
 }
 
@@ -630,6 +630,10 @@ hr {
 	background-color: #efbe02;
 }
 
+body.custom-background {
+	background-size: cover !important;
+}
+
 /* Blog style */
 
 .post-content-wrapper *:nth-child(1) {
@@ -671,6 +675,21 @@ hr {
 	float: left;
 }
 
+.post-middle-picture.no-image:before {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 100px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.post-middle-picture {
+	background-color: rgba(0,0,0,0.2);
+}
+
 .post-image-container {
 	height: 100%;
 	background-size: cover !important;
@@ -678,7 +697,7 @@ hr {
 }
 
 .post-left-content {
-	background-color: #efede4;
+	background-color: #f0f0f0;
 	position: relative;
 }
 
@@ -725,7 +744,7 @@ hr {
 	text-transform: uppercase;
 	font-weight: bold;
 	-webkit-backface-visibility: hidden;
-   	backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .post-left-inner .post-read-more:hover {
@@ -735,8 +754,8 @@ hr {
 .post-left-inner .post-read-more:before {
 	float: right;
 	font-size: 27px;
-    position: relative;
-    top: -4px;
+	position: relative;
+	top: -4px;
 
 	-webkit-transition: all 0.2s ease-in;
 	-moz-transition: all 0.2s ease-in;
@@ -751,6 +770,8 @@ hr {
 
 .post-wrapper {
 	height: 100%;
+	position: relative;
+	left: 0;
 
 	-webkit-transition: all 0.2s ease-in;
 	-moz-transition: all 0.2s ease-in;
@@ -768,11 +789,7 @@ hr {
 }
 
 .show-right-content {
-	-webkit-transform: translateX(-33.33%);
-	-moz-transform: translateX(-33.33%);
-	-o-transform: translateX(-33.33%);
-	-ms-transform: translateX(-33.33%);
-	transform: translateX(-33.33%);
+	left: -33.33%;
 }
 
 .post-shown .post-pagination {
@@ -783,6 +800,7 @@ hr {
 .post-right-content {
 	overflow: hidden;
 	overflow-y: auto;
+	background-color: #fff;
 }
 
 .post-left-inner {
@@ -799,11 +817,14 @@ hr {
 
 .post-inner-title {
 	min-height: 330px;
-	background-color: #efede4;
+	background-color: #f0f0f0;
 	position: relative;
 	display: -webkit-box;
 	-webkit-box-pack: center;
 	-webkit-box-align: center;
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 .post-inner-title h2 {
@@ -826,22 +847,22 @@ hr {
 	text-align: center;
 	background-color: #ffcc02;
 	display: inline-block;
-    margin-right: 30px;
+	margin-right: 30px;
 }
 
 .post-left-inner .post-title:before {
 	content: '';
-    position: absolute;
-    width: 4px;
-    height: 70%;
-    top: 50%;
-    left: 0;
+	position: absolute;
+	width: 4px;
+	height: 70%;
+	top: 50%;
+	left: 0;
 
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .post-left-inner:before {
@@ -883,7 +904,7 @@ hr {
 #middle-menu .nav-menu li:nth-child(5n+1) a:before,
 #middle-menu .nav-menu li:nth-child(5n+1) a:after,
 #bottom-menu li:nth-child(5n+1) a:after,
-.content-wrapper > article:nth-child(5n+1) .widget-area .widget .widget-title:after {
+.content-wrapper > article:nth-child(5n+1) .widget-area .widget .widget-title:before {
 	background-color: #ffcc02
 }
 
@@ -894,7 +915,7 @@ hr {
 #middle-menu .nav-menu li:nth-child(5n+2) a:before,
 #middle-menu .nav-menu li:nth-child(5n+2) a:after,
 #bottom-menu li:nth-child(5n+2) a:after,
-.content-wrapper > article:nth-child(5n+2) .widget-area .widget .widget-title:after {
+.content-wrapper > article:nth-child(5n+2) .widget-area .widget .widget-title:before {
 	background-color: #9d25a0
 }
 
@@ -905,7 +926,7 @@ hr {
 #middle-menu .nav-menu li:nth-child(5n+3) a:before,
 #middle-menu .nav-menu li:nth-child(5n+3) a:after,
 #bottom-menu li:nth-child(5n+3) a:after,
-.content-wrapper > article:nth-child(5n+3) .widget-area .widget .widget-title:after {
+.content-wrapper > article:nth-child(5n+3) .widget-area .widget .widget-title:before {
 	background-color: #fa5cb6
 }
 
@@ -916,7 +937,7 @@ hr {
 #middle-menu .nav-menu li:nth-child(5n+4) a:before,
 #middle-menu .nav-menu li:nth-child(5n+4) a:after,
 #bottom-menu li:nth-child(5n+4) a:after,
-.content-wrapper > article:nth-child(5n+4) .widget-area .widget .widget-title:after {
+.content-wrapper > article:nth-child(5n+4) .widget-area .widget .widget-title:before {
 	background-color: #ff6b00
 }
 
@@ -927,7 +948,7 @@ hr {
 #middle-menu .nav-menu li:nth-child(5n+5) a:before,
 #middle-menu .nav-menu li:nth-child(5n+5) a:after,
 #bottom-menu li:nth-child(5n+5) a:after,
-.content-wrapper > article:nth-child(5n+5) .widget-area .widget .widget-title:after {
+.content-wrapper > article:nth-child(5n+5) .widget-area .widget .widget-title:before {
 	background-color: #09c
 }
 
@@ -1015,10 +1036,10 @@ hr {
 .first-post .post-left-inner .post-excerpt,
 .first-post .post-left-inner .post-read-more {
 	-webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    -ms-transition: none;
-    transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }
@@ -1038,24 +1059,16 @@ hr {
 	height: 100%;
 	min-height: 200px;
 	max-height: 355px;
-	display: flex;
-	margin: auto;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: space-around;
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
-	position: relative;
-	top: 50%;
+	margin: 50px 8% 0;
+}
 
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+#middle-menu ul.nav-menu li {
+	border-bottom: 1px solid rgba(109,110,100,0.2);
+	padding: 19px;
+}
+
+#middle-menu ul.nav-menu li:last-child {
+	border: none;
 }
 
 #middle-menu > div {
@@ -1240,11 +1253,44 @@ body:not(.scroll-down-visible) .scroll-down-container {
 	visibility: visible;
 }
 
+.blog-name {
+	font-size: 35px;
+}
+
+.blog-description {
+	display: block;
+}
+
+.site-logo.black-text .blog-name,
+.site-logo.black-text .blog-description {
+	color: #000;
+}
+
+.site-logo.background--light .blog-name,
+.site-logo.background--light .blog-description {
+	color: #000 !important;
+}
+
+.site-logo.white-text .blog-name,
+.site-logo.white-text .blog-description {
+	color: #fff;
+}
+
+.site-logo.background--dark .blog-name,
+.site-logo.background--dark .blog-description {
+	color: #fff !important;
+}
+
+.post-shown .blog-name,
+.post-shown .blog-description {
+	color: #fff;
+}
+
 /* Post footer */
 
 .post-footer-wrapper {
 	padding: 80px 0 45px;
-	background-color: #efede4;
+	background-color: #f0f0f0;
 }
 
 .post-footer-inner {
@@ -1256,7 +1302,6 @@ body:not(.scroll-down-visible) .scroll-down-container {
 	padding-top: 25px;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-weight: 200;
 	font-style: normal;
 	line-height: 1.25;
 	text-align: center;
@@ -1441,6 +1486,16 @@ a img.aligncenter {
 	fill: transparent;
 }
 
+.menu-icon-wrapper.background--light svg path,
+.menu-icon-wrapper.black-menu svg path {
+	stroke: #000 !important;
+}
+
+.menu-icon-wrapper.background--dark svg path,
+.menu-icon-wrapper.white-menu svg path {
+	stroke: #fff !important;
+}
+
 .post-shown .menu-icon-wrapper svg path,
 body:not(.scroll-down-visible) .menu-icon-wrapper svg path {
 	stroke: #000;
@@ -1568,7 +1623,7 @@ body:not(.scroll-down-visible) .menu-icon-wrapper svg path {
 	color: #000;
 }
 
-#middle-menu li a:before,
+/*#middle-menu li a:before,
 #middle-menu li a:after {
 	content: '';
 	height: 0px;
@@ -1593,6 +1648,10 @@ body:not(.scroll-down-visible) .menu-icon-wrapper svg path {
 #middle-menu li a:hover:before,
 #middle-menu li a:hover:after {
 	height: 41px
+}*/
+
+#middle-menu li a:hover {
+	opacity: 0.5;
 }
 
 #bottom-menu ul {
@@ -1604,14 +1663,19 @@ body:not(.scroll-down-visible) .menu-icon-wrapper svg path {
 	width: 50%;
 	font-size: 16px;
 	font-size: 1rem;
-	border-top: 1px solid rgba(109,110,100,0.2);
+	border-bottom: 1px solid rgba(109,110,100,0.2);
 	text-align: center;
 	float: left;
 	padding: 19px;
 }
 
-#bottom-menu li:nth-child(even) {
-	border-left: 1px solid rgba(109,110,100,0.2);
+#bottom-menu li:nth-child(odd) {
+	border-right: 1px solid rgba(109,110,100,0.2);
+}
+
+#bottom-menu li:nth-child(1),
+#bottom-menu li:nth-child(2) {
+	border-top: 1px solid rgba(109,110,100,0.2);
 }
 
 #bottom-menu li a {
@@ -2033,15 +2097,13 @@ body:not(.single) .widget-area:not(.footer-sidebar) .widget:first-child {
 	text-align: center;
 }
 
-.widget-area .widget .widget-title:after {
+.widget-area .widget .widget-title:before {
 	content: '';
-	display: inline-block;
-	height: 4px;
-	width: 40px;
-	position: relative;
-	text-align: center;
-	display: block;
-	margin: 0 auto;
+    display: inline-block;
+    height: 40px;
+    width: 4px;
+    position: relative;
+    margin-right: 15px;
 }
 
 .beryl-about-author .author-name {
