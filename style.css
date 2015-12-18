@@ -1298,7 +1298,8 @@ body:not(.scroll-down-visible) .scroll-down-container {
 	margin: 0 auto;
 }
 
-.post-copyright {
+.post-copyright,
+.post-copyright a {
 	padding-top: 25px;
 	font-size: 13px;
 	font-size: 0.8125rem;
