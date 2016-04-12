@@ -111,10 +111,10 @@ endif; // beryl_setup
 add_action( 'after_setup_theme', 'beryl_setup' );
 
 // Admin CSS
-function vh_admin_css() {
-	wp_enqueue_style( 'vh-admin-css', get_template_directory_uri() . '/css/wp-admin.css' );
+function beryl_admin_css() {
+	wp_enqueue_style( 'beryl-admin-css', get_template_directory_uri() . '/css/wp-admin.css' );
 }
-add_action('admin_head','vh_admin_css');
+add_action('admin_head','beryl_admin_css');
 
 function beryl_tag_list( $post_id, $return = false ) {
 	$entry_utility = '';
@@ -216,19 +216,6 @@ function beryl_content_width() {
 add_action( 'template_redirect', 'beryl_content_width' );
 
 /**
- * Prevent page scroll when clicking the More link
- *
- * @since Beryl 1.0
- *
- * @return void
- */
-function remove_more_link_scroll( $link ) {
-	$link = preg_replace( '|#more-[0-9]+|', '', $link );
-	return $link;
-}
-add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
-
-/**
  * Register Lato Google font for Beryl 1.0.
  *
  * @since Beryl 1.0
@@ -268,8 +255,8 @@ function beryl_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array() );
 
 	// Add Google fonts
-	wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700&subset=latin');
-	wp_enqueue_style( 'googleFonts');
+	wp_register_style('beryl-googleFonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700&subset=latin');
+	wp_enqueue_style( 'beryl-googleFonts');
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
@@ -283,15 +270,15 @@ function beryl_scripts() {
 
 	wp_enqueue_script( 'comment-reply' );
 
-	wp_enqueue_script( 'segment', get_template_directory_uri() . '/js/segment.min.js', array() );
-	wp_enqueue_script( 'ease', get_template_directory_uri() . '/js/ease.min.js', array() );
+	wp_enqueue_script( 'beryl-segment', get_template_directory_uri() . '/js/segment.min.js', array() );
+	wp_enqueue_script( 'beryl-ease', get_template_directory_uri() . '/js/ease.min.js', array() );
 
 	wp_enqueue_script( 'beryl-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20131209', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '20131209', true );
 
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.min.css', array() );
 
-	wp_enqueue_script( 'jquery.ba-hashchange', get_template_directory_uri() . '/js/jquery.ba-hashchange.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'jquery-ba-hashchange', get_template_directory_uri() . '/js/jquery.ba-hashchange.js', array( 'jquery' ), '', true );
 
 	wp_enqueue_script( 'jquery-ui-draggable' );
 
@@ -304,14 +291,18 @@ function beryl_scripts() {
 	);
 
 	wp_add_inline_style( 'beryl-style', '.post-inner-title { background-image: url('.get_template_directory_uri().'/images/post-bg.png) !important; }' );
+
+	// Add html5
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5.js' );
+	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'beryl_scripts' );
 
 // Admin Javascript
 add_action( 'admin_enqueue_scripts', 'beryl_admin_scripts' );
 function beryl_admin_scripts() {
-	wp_register_script('master', get_template_directory_uri() . '/inc/js/admin-master.js', array('jquery'));
-	wp_enqueue_script('master');
+	wp_register_script('beryl-master', get_template_directory_uri() . '/inc/js/admin-master.js', array('jquery'));
+	wp_enqueue_script('beryl-master');
 }
 
 if ( ! function_exists( 'beryl_the_attached_image' ) ) :
@@ -452,16 +443,6 @@ require get_template_directory() . '/inc/template-tags.php';
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';
 
-function get_depth($postid) {
-	$depth = ($postid==get_option('page_on_front')) ? -1 : 0;
-	while ($postid > 0) {
-	$postid = get_post_ancestors($postid);
-	$postid = $postid[0];
-	$depth++;
-	}
-	return $depth;
-}
-
 /**
  * Register the required plugins for this theme.
  *
@@ -474,7 +455,7 @@ function get_depth($postid) {
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function vh_register_required_plugins() {
+function beryl_register_required_plugins() {
 
 	/**
 	 * Array of plugin arrays. Required keys are name and slug.
@@ -532,13 +513,4 @@ function vh_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
-add_action( 'tgmpa_register', 'vh_register_required_plugins' );
-
-function beryl_allowed_tags() {
-	global $allowedposttags;
-	$allowedposttags['script'] = array(
-		'type' => true,
-		'src' => true
-	);
-}
-add_action( 'init', 'beryl_allowed_tags' );
+add_action( 'tgmpa_register', 'beryl_register_required_plugins' );

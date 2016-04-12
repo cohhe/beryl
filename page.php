@@ -13,7 +13,7 @@
 
 get_header();
 
-global $beryl_site_width, $beryl_layout_type;
+global $beryl_layout_type;
 
 ?>
 

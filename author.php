@@ -11,8 +11,6 @@
 
 get_header();
 
-global $beryl_site_width;
-
 ?>
 
 <div id="main-content" class="main-content">

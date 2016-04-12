@@ -1,4 +1,14 @@
 Beryl changelog
 
+= Version 1.1 =
+* Added content image max width
+* Fixed footer copyright
+* Fixed theme text domain
+* Removed metaboxes
+* Updated TGM plugin version
+* Removed some unnecessary files
+* Prefixed some enqueues/functions
+* Removed social links from customizer
+
 = Version 1.0 =
 * Initial release

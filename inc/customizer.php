@@ -30,7 +30,7 @@ function beryl_customize_register( $wp_customize ) {
 	// Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
 	$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title &amp; Tagline', 'beryl' );
 
-	$wp_customize->get_section( 'header_image' )->title = __( 'Logo', 'blogtheme' );
+	$wp_customize->get_section( 'header_image' )->title = __( 'Logo', 'beryl' );
 
 	// Add General setting panel and configure settings inside it
 	$wp_customize->add_panel( 'beryl_general_panel', array(
@@ -81,18 +81,6 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'beryl_Customized_
 						margin-right: 5px;
 						float: left;
 					}
-					.cohhe-social-profiles li i.twitter {
-						background: url(<?php echo get_template_directory_uri().'/images/icons/twitter.png'; ?>);
-					}
-					.cohhe-social-profiles li i.facebook {
-						background: url(<?php echo get_template_directory_uri().'/images/icons/facebook.png'; ?>);
-					}
-					.cohhe-social-profiles li i.googleplus {
-						background: url(<?php echo get_template_directory_uri().'/images/icons/googleplus.png'; ?>);
-					}
-					.cohhe-social-profiles li i.cohhe_logo {
-						background: url(<?php echo get_template_directory_uri().'/images/icons/cohhe.png'; ?>);
-					}
 					.cohhe-social-profiles li a {
 						height: 20px;
 						line-height: 20px;
@@ -107,10 +95,6 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'beryl_Customized_
 				</style>
 				<ul class="cohhe-social-profiles">
 					<li class="documentation"><a href="http://documentation.cohhe.com/beryl" class="button button-primary button-hero" target="_blank"><?php _e( 'Documentation', 'beryl' ); ?></a></li>
-					<li class="social-twitter"><i class="twitter"></i><a href="https://twitter.com/Cohhe_Themes" target="_blank"><?php _e( 'Follow us on Twitter', 'beryl' ); ?></a></li>
-					<li class="social-facebook"><i class="facebook"></i><a href="https://www.facebook.com/cohhethemes" target="_blank"><?php _e( 'Join us on Facebook', 'beryl' ); ?></a></li>
-					<li class="social-googleplus"><i class="googleplus"></i><a href="https://plus.google.com/+Cohhe_Themes/posts" target="_blank"><?php _e( 'Join us on Google+', 'beryl' ); ?></a></li>
-					<li class="social-cohhe"><i class="cohhe_logo"></i><a href="https://cohhe.com/" target="_blank"><?php _e( 'Cohhe.com', 'beryl' ); ?></a></li>
 				</ul>
 			</li>
 			<?php

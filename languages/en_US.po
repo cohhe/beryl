@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Beryl v1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-12-09 07:00:19+0000\n"
+"PO-Revision-Date: 2016-04-12 09:54:48+0000\n"
 "Last-Translator: smaids <smaids2007@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -61,34 +61,33 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-page.php:18
 #: content.php:41
 #@ beryl
 msgid "Pages:"
 msgstr ""
 
-#: content-none.php:12
+#: content-none.php:13
 #@ beryl
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:18
+#: content-none.php:19
 #, php-format
 #@ beryl
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:22
+#: content-none.php:23
 #@ beryl
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: content-none.php:27
+#: content-none.php:28
 #@ beryl
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: functions.php:443
+#: functions.php:433
 #, php-format
 #@ beryl
 msgid "Page %s"
@@ -118,24 +117,24 @@ msgstr ""
 msgid "Display Site Title &amp; Tagline"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:170
 #@ beryl
 msgid "Beryl 1.0"
 msgstr ""
 
-#: inc/customizer.php:191
+#: inc/customizer.php:173
 #, php-format
 #@ beryl
 msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:174
 #, php-format
 #@ beryl
 msgid "Enhance your site design by using <a href=\"%s\">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Beryl 1.0 uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page."
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:175
 #, php-format
 #@ beryl
 msgid "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s\">Beryl 1.0 documentation</a>."
@@ -157,7 +156,7 @@ msgstr ""
 msgid "<span class=\"meta-nav\">Published In</span>%title"
 msgstr ""
 
-#: inc/customizer.php:127
+#: inc/customizer.php:109
 #@ beryl
 msgid "Documentation"
 msgstr ""
@@ -173,32 +172,32 @@ msgid "Type"
 msgstr ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:303
-#: functions.php:513
+#: functions.php:503
 #@ beryl
 msgid "Install Required Plugins"
 msgstr ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:304
-#: functions.php:514
+#: functions.php:504
 #@ beryl
 msgid "Install Plugins"
 msgstr ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:305
-#: functions.php:515
+#: functions.php:505
 #, php-format
 #@ beryl
 msgid "Installing Plugin: %s"
 msgstr ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:306
-#: functions.php:516
+#: functions.php:506
 #@ beryl
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:308
-#: functions.php:517
+#: functions.php:507
 #, php-format
 #@ beryl
 msgid "This theme requires the following plugin: %1$s."
@@ -207,7 +206,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:313
-#: functions.php:518
+#: functions.php:508
 #, php-format
 #@ beryl
 msgid "This theme recommends the following plugin: %1$s."
@@ -224,7 +223,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:323
-#: functions.php:523
+#: functions.php:513
 #, php-format
 #@ beryl
 msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
@@ -249,7 +248,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:338
-#: functions.php:520
+#: functions.php:510
 #, php-format
 #@ beryl
 msgid "The following required plugin is currently inactive: %1$s."
@@ -258,7 +257,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:343
-#: functions.php:521
+#: functions.php:511
 #, php-format
 #@ beryl
 msgid "The following recommended plugin is currently inactive: %1$s."
@@ -275,7 +274,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:353
-#: functions.php:525
+#: functions.php:515
 #@ beryl
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
@@ -297,7 +296,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:368
-#: functions.php:527
+#: functions.php:517
 #@ beryl
 msgid "Return to Required Plugins Installer"
 msgstr ""
@@ -309,7 +308,7 @@ msgstr ""
 
 #: functions/tgm-activation/class-tgm-plugin-activation.php:370
 #: functions/tgm-activation/class-tgm-plugin-activation.php:3047
-#: functions.php:528
+#: functions.php:518
 #@ beryl
 msgid "Plugin activated successfully."
 msgstr ""
@@ -674,7 +673,7 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:509
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
@@ -682,7 +681,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to install the 
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:522
+#: functions.php:512
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
@@ -690,7 +689,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to activate the
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:524
+#: functions.php:514
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
@@ -698,55 +697,45 @@ msgid_plural "Sorry, but you do not have the correct permissions to update the %
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:526
+#: functions.php:516
 #@ beryl
 msgid "Activate installed plugin"
 msgid_plural "Activate installed plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:529
+#: functions.php:519
 #, php-format
 #@ beryl
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: inc/customizer.php:37
+#: inc/customizer.php:39
 #@ beryl
 msgid "General settings"
 msgstr ""
 
-#: inc/customizer.php:38
+#: inc/customizer.php:40
 #@ beryl
 msgid "You can configure your general theme settings here"
 msgstr ""
 
-#: inc/customizer.php:45
-#@ beryl
-msgid "Scroll to top"
-msgstr ""
-
-#: inc/customizer.php:46
-#@ beryl
-msgid "Do you want to enable \"Scroll to Top\" button?"
-msgstr ""
-
-#: inc/customizer.php:128
+#: inc/customizer.php:110
 #@ beryl
 msgid "Follow us on Twitter"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:111
 #@ beryl
 msgid "Join us on Facebook"
 msgstr ""
 
-#: inc/customizer.php:130
+#: inc/customizer.php:112
 #@ beryl
 msgid "Join us on Google+"
 msgstr ""
 
-#: inc/customizer.php:131
+#: inc/customizer.php:113
 #@ beryl
 msgid "Cohhe.com"
 msgstr ""
@@ -798,39 +787,44 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: header.php:58
+#: header.php:54
 #@ beryl
 msgid "Site logo"
 msgstr ""
 
-#: content.php:27
+#: content.php:28
 #@ beryl
 msgid "Read more"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:100
 #@ beryl
 msgid "Middle menu"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:101
 #@ beryl
 msgid "Bottom menu"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:193
 #@ beryl
 msgid "Footer Widget Area"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:195
 #@ beryl
 msgid "Appears in the post footer section of the site."
 msgstr ""
 
-#: header.php:45
-#: header.php:76
+#: header.php:41
+#: header.php:75
 #@ beryl
 msgid "Search"
+msgstr ""
+
+#: inc/customizer.php:33
+#@ beryl
+msgid "Logo"
 msgstr ""
 

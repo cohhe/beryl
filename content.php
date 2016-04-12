@@ -52,7 +52,7 @@ if ( !empty($img) ) {
 							<?php dynamic_sidebar( 'sidebar-1' ); ?>
 						</div><!-- #footer-sidebar -->
 					<?php } ?>
-					<div class="post-copyright">Theme by <a href="https://cohhe.com" target="_blank">Cohhe</a>.</div>
+					<div class="post-copyright">&copy; <?php echo date('Y') ?> <a href="https://cohhe.com" target="_blank">Cohhe Themes</a>. All rights reserved.</div>
 				</div>
 			</div>
 		</div>
