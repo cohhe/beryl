@@ -1,5 +1,9 @@
 Beryl changelog
 
+= Version 1.2 =
+* Fixed js issue
+* Fixed minor styling issues
+
 = Version 1.1 =
 * Added content image max width
 * Fixed footer copyright

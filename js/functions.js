@@ -159,10 +159,12 @@ jQuery(document).ready(function($) {
 		jQuery('.post-wrapper').addClass('show-right-content');
 	};
 
-	BackgroundCheck.init({
-		targets: '.menu-icon-wrapper, .site-logo',
-		images: '.post-image-container'
-	});
+	if ( jQuery('.post-image-container').length ) {
+		BackgroundCheck.init({
+			targets: '.menu-icon-wrapper, .site-logo',
+			images: '.post-image-container'
+		});
+	}
 
 	if ( jQuery('.site-logo').hasClass('text') ) {
 		if ( beryl_isDark(jQuery('.content-wrapper article.post-in-sight .post-left-content').css("background-color")) ) {
