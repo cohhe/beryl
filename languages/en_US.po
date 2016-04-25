@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Beryl v1.0.0\n"
+"Project-Id-Version: Beryl v1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2016-04-12 09:54:48+0000\n"
+"PO-Revision-Date: 2016-04-13 10:21:18+0000\n"
 "Last-Translator: smaids <smaids2007@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -117,37 +117,27 @@ msgstr ""
 msgid "Display Site Title &amp; Tagline"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:154
 #@ beryl
 msgid "Beryl 1.0"
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:157
 #, php-format
 #@ beryl
 msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:158
 #, php-format
 #@ beryl
 msgid "Enhance your site design by using <a href=\"%s\">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Beryl 1.0 uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page."
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:159
 #, php-format
 #@ beryl
 msgid "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s\">Beryl 1.0 documentation</a>."
-msgstr ""
-
-#: inc/metaboxes/layouts.php:8
-#@ beryl
-msgid "Layouts"
-msgstr ""
-
-#: inc/metaboxes/layouts.php:15
-#@ beryl
-msgid "Layout type"
 msgstr ""
 
 #: inc/template-tags.php:87
@@ -156,48 +146,48 @@ msgstr ""
 msgid "<span class=\"meta-nav\">Published In</span>%title"
 msgstr ""
 
-#: inc/customizer.php:109
+#: inc/customizer.php:97
 #@ beryl
 msgid "Documentation"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2664
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2604
 #@ beryl
 msgid "Activate"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2510
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2430
 #@ beryl
 msgid "Type"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:303
-#: functions.php:503
+#: functions/tgm-activation/class-tgm-plugin-activation.php:333
+#: functions.php:493
 #@ beryl
 msgid "Install Required Plugins"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:304
-#: functions.php:504
+#: functions/tgm-activation/class-tgm-plugin-activation.php:334
+#: functions.php:494
 #@ beryl
 msgid "Install Plugins"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:305
-#: functions.php:505
+#: functions/tgm-activation/class-tgm-plugin-activation.php:335
+#: functions.php:495
 #, php-format
 #@ beryl
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:306
-#: functions.php:506
+#: functions/tgm-activation/class-tgm-plugin-activation.php:336
+#: functions.php:496
 #@ beryl
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:308
-#: functions.php:507
+#: functions/tgm-activation/class-tgm-plugin-activation.php:338
+#: functions.php:497
 #, php-format
 #@ beryl
 msgid "This theme requires the following plugin: %1$s."
@@ -205,8 +195,8 @@ msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:313
-#: functions.php:508
+#: functions/tgm-activation/class-tgm-plugin-activation.php:343
+#: functions.php:498
 #, php-format
 #@ beryl
 msgid "This theme recommends the following plugin: %1$s."
@@ -214,7 +204,7 @@ msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:318
+#: functions/tgm-activation/class-tgm-plugin-activation.php:348
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to install the %1$s plugin."
@@ -222,8 +212,8 @@ msgid_plural "Sorry, but you do not have the correct permissions to install the 
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:323
-#: functions.php:513
+#: functions/tgm-activation/class-tgm-plugin-activation.php:353
+#: functions.php:503
 #, php-format
 #@ beryl
 msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
@@ -231,7 +221,7 @@ msgid_plural "The following plugins need to be updated to their latest version t
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:328
+#: functions/tgm-activation/class-tgm-plugin-activation.php:358
 #, php-format
 #@ beryl
 msgid "There is an update available for: %1$s."
@@ -239,7 +229,7 @@ msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:333
+#: functions/tgm-activation/class-tgm-plugin-activation.php:363
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to update the %1$s plugin."
@@ -247,8 +237,8 @@ msgid_plural "Sorry, but you do not have the correct permissions to update the %
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:338
-#: functions.php:510
+#: functions/tgm-activation/class-tgm-plugin-activation.php:368
+#: functions.php:500
 #, php-format
 #@ beryl
 msgid "The following required plugin is currently inactive: %1$s."
@@ -256,8 +246,8 @@ msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:343
-#: functions.php:511
+#: functions/tgm-activation/class-tgm-plugin-activation.php:373
+#: functions.php:501
 #, php-format
 #@ beryl
 msgid "The following recommended plugin is currently inactive: %1$s."
@@ -265,7 +255,7 @@ msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:348
+#: functions/tgm-activation/class-tgm-plugin-activation.php:378
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to activate the %1$s plugin."
@@ -273,188 +263,183 @@ msgid_plural "Sorry, but you do not have the correct permissions to activate the
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:353
-#: functions.php:515
+#: functions/tgm-activation/class-tgm-plugin-activation.php:383
+#: functions.php:505
 #@ beryl
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:358
+#: functions/tgm-activation/class-tgm-plugin-activation.php:388
 #@ beryl
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:363
+#: functions/tgm-activation/class-tgm-plugin-activation.php:393
 #@ beryl
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:368
-#: functions.php:517
+#: functions/tgm-activation/class-tgm-plugin-activation.php:397
+#: functions.php:507
 #@ beryl
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:369
+#: functions/tgm-activation/class-tgm-plugin-activation.php:398
 #@ beryl
 msgid "Return to the dashboard"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:370
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3047
-#: functions.php:518
+#: functions/tgm-activation/class-tgm-plugin-activation.php:399
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3021
+#: functions.php:508
 #@ beryl
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:372
+#: functions/tgm-activation/class-tgm-plugin-activation.php:401
 #, php-format
 #@ beryl
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:373
+#: functions/tgm-activation/class-tgm-plugin-activation.php:402
 #, php-format
 #@ beryl
 msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:374
+#: functions/tgm-activation/class-tgm-plugin-activation.php:403
 #, php-format
 #@ beryl
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:375
+#: functions/tgm-activation/class-tgm-plugin-activation.php:404
 #@ beryl
 msgid "Dismiss this notice"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:376
+#: functions/tgm-activation/class-tgm-plugin-activation.php:405
 #@ beryl
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:494
+#: functions/tgm-activation/class-tgm-plugin-activation.php:520
 #@ beryl
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:495
+#: functions/tgm-activation/class-tgm-plugin-activation.php:521
 #@ beryl
 msgid "Update Required"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:612
-#@ beryl
-msgid "Set the parent_slug config variable instead."
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:806
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3465
+#: functions/tgm-activation/class-tgm-plugin-activation.php:820
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3430
 #@ beryl
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:921
+#: functions/tgm-activation/class-tgm-plugin-activation.php:927
 #@ beryl
 msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:921
-#: functions/tgm-activation/class-tgm-plugin-activation.php:925
+#: functions/tgm-activation/class-tgm-plugin-activation.php:927
+#: functions/tgm-activation/class-tgm-plugin-activation.php:930
 #@ beryl
 msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:925
+#: functions/tgm-activation/class-tgm-plugin-activation.php:930
 #@ beryl
 msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:1110
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2864
+#: functions/tgm-activation/class-tgm-plugin-activation.php:1108
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2820
 #@ beryl
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:1932
+#: functions/tgm-activation/class-tgm-plugin-activation.php:1873
 #, php-format
 #@ beryl
 msgctxt "%s = version number"
 msgid "TGMPA v%s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2213
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2159
 #@ beryl
 msgid "Required"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2216
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2162
 #@ beryl
 msgid "Recommended"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2233
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2178
 #@ beryl
 msgid "WordPress Repository"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2237
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2181
 #@ beryl
 msgid "External Source"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2241
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2184
 #@ beryl
 msgid "Pre-Packaged"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2260
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2201
 #@ beryl
 msgid "Not Installed"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2264
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2205
 #@ beryl
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2266
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2207
 #@ beryl
 msgid "Active"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2272
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2213
 #@ beryl
 msgid "Required Update not Available"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2275
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2216
 #@ beryl
 msgid "Requires Update"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2278
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2219
 #@ beryl
 msgid "Update recommended"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2286
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2227
 #, php-format
 #@ beryl
 msgctxt "%1$s = install status, %2$s = update status"
 msgid "%1$s, %2$s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2335
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2272
 #, php-format
 #@ beryl
 msgctxt "plugins"
@@ -463,7 +448,7 @@ msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2339
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2275
 #, php-format
 #@ beryl
 msgid "To Install <span class=\"count\">(%s)</span>"
@@ -471,7 +456,7 @@ msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2343
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2278
 #, php-format
 #@ beryl
 msgid "Update Available <span class=\"count\">(%s)</span>"
@@ -479,7 +464,7 @@ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2347
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2281
 #, php-format
 #@ beryl
 msgid "To Activate <span class=\"count\">(%s)</span>"
@@ -487,193 +472,193 @@ msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2440
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2363
 #@ beryl
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2448
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2371
 #@ beryl
 msgid "Installed version:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2456
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2379
 #@ beryl
 msgid "Minimum required version:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2468
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2391
 #@ beryl
 msgid "Available version:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2492
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2414
 #, php-format
 #@ beryl
 msgid "No plugins to install, update or activate. <a href=\"%1$s\">Return to the Dashboard</a>"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2508
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2428
 #@ beryl
 msgid "Plugin"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2509
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2429
 #@ beryl
 msgid "Source"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2514
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2434
 #@ beryl
 msgid "Version"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2515
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2435
 #@ beryl
 msgid "Status"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2539
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2483
 #, php-format
 #@ beryl
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Install %2$s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2545
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2487
 #, php-format
 #@ beryl
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Update %2$s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2551
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2492
 #, php-format
 #@ beryl
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Activate %2$s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2622
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2562
 #@ beryl
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2655
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2595
 #@ beryl
 msgid "Install"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2661
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2601
 #@ beryl
 msgid "Update"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2725
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2673
 #@ beryl
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2727
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2675
 #@ beryl
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2850
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2806
 #@ beryl
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
 #. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2868
-#: functions/tgm-activation/class-tgm-plugin-activation.php:371
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2824
+#: functions/tgm-activation/class-tgm-plugin-activation.php:400
 #@ beryl
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3046
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3020
 #@ beryl
 msgid "Plugin activation failed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3385
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3354
 #, php-format
 #@ beryl
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3389
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3356
 #, php-format
 #@ beryl
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3390
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3357
 #, php-format
 #@ beryl
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3394
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3361
 #@ beryl
 msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3395
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3362
 #, php-format
 #@ beryl
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3395
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3402
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3362
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3368
 #@ beryl
 msgid "Show Details"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3395
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3402
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3362
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3368
 #@ beryl
 msgid "Hide Details"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3396
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3363
 #@ beryl
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3397
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3364
 #, php-format
 #@ beryl
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3401
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3367
 #@ beryl
 msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3402
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3368
 #, php-format
 #@ beryl
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3403
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3369
 #@ beryl
 msgid "All installations have been completed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3404
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3370
 #, php-format
 #@ beryl
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions.php:509
+#: functions.php:499
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
@@ -681,7 +666,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to install the 
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:512
+#: functions.php:502
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
@@ -689,7 +674,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to activate the
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:514
+#: functions.php:504
 #, php-format
 #@ beryl
 msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
@@ -697,14 +682,14 @@ msgid_plural "Sorry, but you do not have the correct permissions to update the %
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:516
+#: functions.php:506
 #@ beryl
 msgid "Activate installed plugin"
 msgid_plural "Activate installed plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:519
+#: functions.php:509
 #, php-format
 #@ beryl
 msgid "All plugins installed and activated successfully. %s"
@@ -718,26 +703,6 @@ msgstr ""
 #: inc/customizer.php:40
 #@ beryl
 msgid "You can configure your general theme settings here"
-msgstr ""
-
-#: inc/customizer.php:110
-#@ beryl
-msgid "Follow us on Twitter"
-msgstr ""
-
-#: inc/customizer.php:111
-#@ beryl
-msgid "Join us on Facebook"
-msgstr ""
-
-#: inc/customizer.php:112
-#@ beryl
-msgid "Join us on Google+"
-msgstr ""
-
-#: inc/customizer.php:113
-#@ beryl
-msgid "Cohhe.com"
 msgstr ""
 
 #: inc/template-tags.php:89
@@ -826,5 +791,20 @@ msgstr ""
 #: inc/customizer.php:33
 #@ beryl
 msgid "Logo"
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2635
+#@ beryl
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2637
+#@ beryl
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2780
+#@ beryl
+msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
 

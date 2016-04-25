@@ -124,8 +124,9 @@ function beryl_tag_list( $post_id, $return = false ) {
 		<div class="tag-link">
 			<span class="icon-tags"></span>';
 				foreach( $posttags as $tag ) {
-					$entry_utility .= $tag->name . ' '; 
+					$entry_utility .= '<a href="' . get_tag_link($tag->term_id) . '" class="open-tag">' . $tag->name . '</a>, '; 
 				}
+				$entry_utility = rtrim($entry_utility, ', ');
 			$entry_utility .= '
 		</div>';
 	}
@@ -483,8 +484,7 @@ function beryl_register_required_plugins() {
 	$config = array(
 		'domain'       		=> 'beryl',         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
-		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
-		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
+		'parent_slug' 	    => 'themes.php', 				// Default parent slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
 		'is_automatic'    	=> true,					   	// Automatically activate plugins after installation or not

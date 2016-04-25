@@ -3,8 +3,8 @@ Theme Name: Beryl
 Theme URI: https://cohhe.com/project-view/beryl/
 Author: Cohhe
 Author URI: https://cohhe.com/
-Description: Enhance your story experience, by leveraging the power of Beryl Wordpress Theme, built especially for telling great stories. It is the only free WordPress theme fully compatible with the Aesop Story Engine.
-Version: 1.2
+Description: Enhance your story experience, by leveraging the power of Beryl WordPress Theme, built especially for telling great stories. It is the only free WordPress theme fully compatible with the Aesop Story Engine.
+Version: 1.3
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
@@ -637,6 +637,23 @@ body.custom-background {
 	background-size: cover !important;
 }
 
+.post-meta > div {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+.post-meta > div > span:before {
+	margin-right: 10px;
+}
+
+.post-meta > div a {
+	color: #212121;
+}
+
+.post-meta > div a:hover {
+	color: #ffcc02;
+}
+
 /* Blog style */
 
 .post-content-wrapper *:nth-child(1) {
@@ -902,6 +919,10 @@ body.custom-background {
 
 .nav-menu li {
 	list-style: none;
+}
+
+#middle-menu {
+	overflow: auto;
 }
 
 .post-pagination-item.active:nth-child(5n+1),

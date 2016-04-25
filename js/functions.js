@@ -145,7 +145,11 @@ jQuery(document).ready(function($) {
 	});
 
 	// Set middle menu height
-	jQuery('#middle-menu').height(jQuery(window).height()-jQuery('#bottom-menu').height()-83);
+	var admin_menu = 0;
+	if ( jQuery('body').hasClass('admin-bar') ) {
+		admin_menu = 32;
+	}
+	jQuery('#middle-menu').height(jQuery(window).height()-jQuery('#bottom-menu').height()-83-admin_menu);
 
 	jQuery(document).on('click', '.scroll-down', function() {
 		var current = jQuery('.post-pagination-item.active');

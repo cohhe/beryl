@@ -1,5 +1,11 @@
 Beryl changelog
 
+= Version 1.3 =
+* Fixed TGM issue
+* Added tags and categories
+* Added scrollbar to menu
+* Increased screenshot resolution
+
 = Version 1.2 =
 * Fixed js issue
 * Fixed minor styling issues

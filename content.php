@@ -34,6 +34,10 @@ if ( !empty($img) ) {
 				<h2><?php echo get_the_title(); ?></h2>
 			</div>
 			<div class="post-content-wrapper">
+				<div class="post-meta">
+					<?php beryl_category_list( get_the_ID() ); ?>
+					<?php beryl_tag_list( get_the_ID() ); ?>
+				</div>
 				<?php the_content(); ?>
 				<?php comments_template( '/comments.php', true ); ?>
 				<?php
