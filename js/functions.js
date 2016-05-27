@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
 		if ( !jQuery('.content-wrapper article.post-in-sight .post-middle-picture').hasClass('no-image') ) {
 			setTimeout(function() {
 				BackgroundCheck.refresh();
-			}, 250);
+			}, 350);
 		};
 		
 		// Check background color for logo
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 					jQuery('.menu-icon-wrapper').addClass('black-menu');
 					jQuery('.menu-icon-wrapper').removeClass('white-menu');
 				}
-			}, 200);
+			}, 300);
 		};
 	});
 
@@ -234,7 +234,7 @@ function beryl_scroll_posts( current, next, pagination ) {
 				jQuery('.site-logo').addClass('black-text');
 				jQuery('.site-logo').removeClass('white-text');
 			}
-		}, 200);
+		}, 300);
 	};
 
 	// Update pagination

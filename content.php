@@ -12,7 +12,7 @@
 $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'beryl-full-width' );
 $img_html = '';
 if ( !empty($img) ) {
-	$img_html .= '<div class="post-middle-picture"><div class="post-image-container" style="background: url(' . $img['0'] . ');"></div></div>';
+	$img_html .= '<div class="post-middle-picture"><div class="post-image-container" style="background: url(' . esc_url( $img['0'] ) . ');"></div></div>';
 } else {
 	$img_html .= '<div class="post-middle-picture no-image icon-picture"></div>';
 }

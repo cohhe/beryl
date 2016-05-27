@@ -27,15 +27,26 @@
 	<?php wp_head(); ?>
 </head>
 <?php
-global $beryl_layout_type, $withcomments;
+global $beryl_layout_type, $withcomments, $wp_version;
 $withcomments = 1;
 
 $form_class    = '';
 $class         = '';
 $search_string = '';
 
-$logo = get_custom_header();
-$logo = $logo->url;
+if ( version_compare( $wp_version, '4.5', '>=' ) ) {
+	$logo = '';
+	if ( get_custom_logo() ) {
+		$logo = get_custom_logo();
+	};
+} else {
+	$logo_f = get_custom_header();
+	$logo_f = $logo->url;
+	$logo = '';
+	if ( $logo_f ) {
+		$logo = '<img src="'.$logo_f.'" alt="'.__('Site logo', 'beryl').'">';
+	}
+}
 
 if (get_search_query() == '') {
 	$search_string = __('Search', 'beryl');
@@ -50,9 +61,9 @@ if (get_search_query() == '') {
 	<div id="main" class="site-main container">
 		<div class="post-pagination"><?php echo beryl_get_pagination( $GLOBALS['wp_query']->post_count ); ?></div>
 		<div class="site-logo <?php if ( !$logo ) { echo "text"; } ?>">
-			<?php if ( $logo ) { ?>
-				<img src="<?php echo $logo; ?>" alt="<?php _e('Site logo', 'beryl'); ?>">
-			<?php } else { ?>
+			<?php if ( $logo ) {
+				echo $logo;
+			} else { ?>
 				<span class="blog-name"><?php bloginfo( 'name' ); ?></span>
 				<span class="blog-description"><?php bloginfo( 'description' ); ?></span>
 			<?php } ?>

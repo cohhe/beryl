@@ -1,5 +1,12 @@
 Beryl changelog
 
+= Version 1.4 =
+* Moved genericons folder to fonts folder
+* Added WordPress version 4.5 Logo support
+* Removed unsupported tags from style.css
+* Added some licensing information
+* Fixed some styling issues
+
 = Version 1.3 =
 * Fixed TGM issue
 * Added tags and categories

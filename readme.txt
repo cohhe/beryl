@@ -38,5 +38,17 @@ Segment, Copyright 2015 lmgonzalves
 Segment is licensed under the MIT license
 Source: https://github.com/lmgonzalves/segment
 
+Easing, Copyright © 2008 George McGinley Smith
+Easing is licensed under the BSD license
+Source: http://gsgd.co.uk/sandbox/jquery/easing/
+
+Animate, Copyright 2014 Daniel Eden
+Animate is licensed under the MIT license
+Source: http://daneden.me/animate
+
+Hashchange, Copyright 2010 "Cowboy" Ben Alman
+Hashchange is dual licensed under the MIT and GPL licenses
+Source: http://benalman.com/projects/jquery-hashchange-plugin/
+
 Used images in screenshot.png, licensed under CC0 Public Domain, free for commercial use / no attribution required
 https://pixabay.com/en/girl-summer-dress-pretty-woman-571808/

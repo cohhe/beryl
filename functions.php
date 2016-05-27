@@ -56,6 +56,7 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 	 * @since Beryl 1.0
 	 */
 	function beryl_setup() {
+		global $wp_version;
 		/**
 		 * Required: include TGM.
 		 */
@@ -105,7 +106,13 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 		add_filter( 'use_default_gallery_style', '__return_false' );
 
 		add_theme_support( 'title-tag' );
-		add_theme_support( 'custom-header' );
+
+		if ( version_compare( $wp_version, '4.5', '>=' ) ) {
+			add_theme_support( 'custom-logo' );
+		} else {
+			add_theme_support( 'custom-header' );
+		}
+		
 	}
 endif; // beryl_setup
 add_action( 'after_setup_theme', 'beryl_setup' );
@@ -260,7 +267,7 @@ function beryl_scripts() {
 	wp_enqueue_style( 'beryl-googleFonts');
 
 	// Add Genericons font, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', array(), '3.0.2' );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'beryl-style', get_stylesheet_uri(), array( 'genericons' ) );
