@@ -1,5 +1,17 @@
 Beryl changelog
 
+= Version 1.5 =
+* Removed some tags from style.css
+* Removed title tag from header
+* Fixed site title at customizer
+* Added custom logo default sizes
+* Prefixed and escaped some variables
+* Escaped home_url function
+* Changed how content_width is setup
+* Removed background support
+* Used h1 tag for titles
+* Fixed some responsiveness issues
+
 = Version 1.4 =
 * Moved genericons folder to fonts folder
 * Added WordPress version 4.5 Logo support

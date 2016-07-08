@@ -32,10 +32,10 @@
  *
  * @since Beryl 1.0
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 800;
+function beryl_set_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'beryl_set_content_width', 800 );
 }
-
+add_action( 'after_setup_theme', 'beryl_set_content_width', 0 );
 /**
  * Beryl 1.0 only works in WordPress 3.6 or later.
  */
@@ -91,11 +91,6 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 			'search-form', 'comment-form', 'comment-list',
 		) );
 
-		// This theme allows users to set a custom background.
-		add_theme_support( 'custom-background', apply_filters( 'beryl_custom_background_args', array(
-			'default-color' => 'fff',
-		) ) );
-
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
 			'middle'   => __( 'Middle menu', 'beryl' ),
@@ -108,7 +103,7 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		if ( version_compare( $wp_version, '4.5', '>=' ) ) {
-			add_theme_support( 'custom-logo' );
+			add_theme_support( 'custom-logo', array( 'height' => 60, 'width' => 240, 'flex-width' => true ) );
 		} else {
 			add_theme_support( 'custom-header' );
 		}
@@ -131,7 +126,7 @@ function beryl_tag_list( $post_id, $return = false ) {
 		<div class="tag-link">
 			<span class="icon-tags"></span>';
 				foreach( $posttags as $tag ) {
-					$entry_utility .= '<a href="' . get_tag_link($tag->term_id) . '" class="open-tag">' . $tag->name . '</a>, '; 
+					$entry_utility .= '<a href="' . esc_url(get_tag_link($tag->term_id)) . '" class="open-tag">' . $tag->name . '</a>, '; 
 				}
 				$entry_utility = rtrim($entry_utility, ', ');
 			$entry_utility .= '

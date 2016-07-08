@@ -23,7 +23,7 @@ if ( !empty($img) ) {
 	<div class="post-wrapper">
 		<div class="post-left-content">
 			<div class="post-left-inner">
-				<h2 class="post-title"><?php echo get_the_title(); ?></h2>
+				<h1 class="post-title"><?php echo get_the_title(); ?></h1>
 				<div class="post-excerpt"><?php echo get_the_excerpt(); ?></div>
 				<a href="<?php the_permalink(); ?>" class="post-read-more icon-angle-right"><?php _e('Read more', 'beryl'); ?></a>
 			</div>
@@ -31,7 +31,7 @@ if ( !empty($img) ) {
 		<?php echo $img_html; ?>
 		<div class="post-right-content">
 			<div class="post-inner-title">
-				<h2><?php echo get_the_title(); ?></h2>
+				<h1><?php echo get_the_title(); ?></h1>
 			</div>
 			<div class="post-content-wrapper">
 				<div class="post-meta">

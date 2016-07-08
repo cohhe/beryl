@@ -21,7 +21,6 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
@@ -35,16 +34,21 @@ $class         = '';
 $search_string = '';
 
 if ( version_compare( $wp_version, '4.5', '>=' ) ) {
-	$logo = '';
+	$beryl_logo = '';
 	if ( get_custom_logo() ) {
-		$logo = get_custom_logo();
+		$beryl_logo = get_custom_logo();
 	};
+	if ( is_customize_preview() ) {
+		if ( strstr($beryl_logo, '<img class') !== false ) {
+			$beryl_logo = '';
+		}
+	}
 } else {
-	$logo_f = get_custom_header();
-	$logo_f = $logo->url;
-	$logo = '';
-	if ( $logo_f ) {
-		$logo = '<img src="'.$logo_f.'" alt="'.__('Site logo', 'beryl').'">';
+	$beryl_logo_f = get_custom_header();
+	$beryl_logo_f = $beryl_logo->url;
+	$beryl_logo = '';
+	if ( $beryl_logo_f ) {
+		$beryl_logo = '<img src="'.esc_url($beryl_logo_f).'" alt="'.__('Site logo', 'beryl').'">';
 	}
 }
 
@@ -60,9 +64,10 @@ if (get_search_query() == '') {
 <div id="page" class="hfeed site">
 	<div id="main" class="site-main container">
 		<div class="post-pagination"><?php echo beryl_get_pagination( $GLOBALS['wp_query']->post_count ); ?></div>
-		<div class="site-logo <?php if ( !$logo ) { echo "text"; } ?>">
-			<?php if ( $logo ) {
-				echo $logo;
+		<div class="site-logo <?php if ( !$beryl_logo ) { echo "text"; } ?>">
+			<?php
+			if ( $beryl_logo ) {
+				echo $beryl_logo;
 			} else { ?>
 				<span class="blog-name"><?php bloginfo( 'name' ); ?></span>
 				<span class="blog-description"><?php bloginfo( 'description' ); ?></span>
@@ -80,10 +85,10 @@ if (get_search_query() == '') {
 		</div>
 		<div class="main-navigation-container">
 			<div class="search-form">
-				<form action="<?php echo home_url(); ?>" method="get">
+				<form action="<?php echo esc_url(home_url()); ?>" method="get">
 					<span class="sb-icon-search icon-search blue-button"></span>
-					<input type="text" name="s" onclick="clearInput(this, 'Search');" value="<?php echo $search_string; ?>" />
-					<input type="submit" name="search" class="btn btn-primary sb-search-submit" value="<?php _e('Search', 'beryl'); ?>" />
+					<input type="text" name="s" onclick="clearInput(this, 'Search');" value="<?php echo esc_attr($search_string); ?>" />
+					<input type="submit" name="search" class="btn btn-primary sb-search-submit" value="<?php esc_attr(_e('Search', 'beryl')); ?>" />
 				</form>
 			</div>
 			<div id="middle-menu">
