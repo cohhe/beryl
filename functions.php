@@ -518,34 +518,38 @@ function beryl_register_required_plugins() {
 add_action( 'tgmpa_register', 'beryl_register_required_plugins' );
 
 function beryl_admin_rating_notice() {
+	$current_screen = get_current_screen();
 	$user = wp_get_current_user();
-	?>
-	<div class="beryl-rating-notice">
-		<span class="beryl-notice-left">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/logo-square.png" alt="">
-		</span>
-		<div class="beryl-notice-center">
-			<p>Hi there, <?php echo $user->data->display_name; ?>, we noticed that you've been using Beryl for a while now.</p>
-			<p>We spent many hours developing this free theme for you and we would appriciate if you supported us by rating it!</p>
+
+	if ( $current_screen->parent_base != 'themes' ) {
+		return;
+	}
+	if ( get_option('beryl_rating_notice') && get_option('beryl_rating_notice') != 'hide' && time() - get_option('beryl_rating_notice') > 432000 ) { ?>
+		<div class="beryl-rating-notice">
+			<span class="beryl-notice-left">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-square.png" alt="">
+			</span>
+			<div class="beryl-notice-center">
+				<p><?php printf( __( 'Hi there, %s, we noticed that you\'ve been using Beryl for a while now.', 'beryl' ), $user->data->display_name ); ?></p>
+				<p><?php _e('We spent many hours developing this free theme for you and we would appriciate if you supported us by rating it!', 'beryl'); ?></p>
+			</div>
+			<div class="beryl-notice-right">
+				<a href="https://wordpress.org/support/view/theme-reviews/beryl?rate=5#postform" class="button button-primary button-large beryl-rating-rate"><?php _e('Rate at WordPress', 'beryl'); ?></a>
+				<a href="javascript:void(0)" class="button button-large preview beryl-rating-dismiss"><?php _e('No, thanks', 'beryl'); ?></a>
+			</div>
+			<div class="clearfix"></div>
 		</div>
-		<div class="beryl-notice-right">
-			<a href="https://wordpress.org/support/view/theme-reviews/beryl?rate=5#postform" class="button button-primary button-large beryl-rating-rate">Rate at WordPress</a>
-			<a href="javascript:void(0)" class="button button-large preview beryl-rating-dismiss">No, thanks</a>
-		</div>
-		<div class="clearfix"></div>
-	</div>
 	<?php
+	}
 }
-if ( get_option('beryl_rating_notice') && get_option('beryl_rating_notice') != 'hide' && time() - get_option('beryl_rating_notice') > 432000 ) {
-	add_action( 'admin_notices', 'beryl_admin_rating_notice' );
-}
+add_action( 'admin_notices', 'beryl_admin_rating_notice' );
+
 
 function beryl_dismiss_rating_notice() {
 	update_option('beryl_rating_notice', 'hide');
 
 	die(0);
 }
-add_action( 'wp_ajax_nopriv_beryl_dismiss_notice', 'beryl_dismiss_rating_notice' );
 add_action( 'wp_ajax_beryl_dismiss_notice', 'beryl_dismiss_rating_notice' );
 
 function beryl_theme_activated() {

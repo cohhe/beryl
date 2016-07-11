@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.5.1 =
+* Made some changes to admin rate notice
+
 = Version 1.5 =
 * Removed some tags from style.css
 * Removed title tag from header
