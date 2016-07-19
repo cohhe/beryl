@@ -36,12 +36,6 @@ function beryl_set_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'beryl_set_content_width', 800 );
 }
 add_action( 'after_setup_theme', 'beryl_set_content_width', 0 );
-/**
- * Beryl 1.0 only works in WordPress 3.6 or later.
- */
-if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
-}
 
 if ( ! function_exists( 'beryl_setup' ) ) :
 	/**
@@ -112,11 +106,17 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 endif; // beryl_setup
 add_action( 'after_setup_theme', 'beryl_setup' );
 
-// Admin CSS
-function beryl_admin_css() {
+function beryl_admin_scripts( $hook ) {
+	if ( $hook != 'themes.php' && $hook != 'post-new.php' ) {
+		return;
+	}
+	// Admin Javascript
+	wp_enqueue_script('beryl-master', get_template_directory_uri() . '/inc/js/admin-master.js', array('jquery') );
+
+	// Admin CSS
 	wp_enqueue_style( 'beryl-admin-css', get_template_directory_uri() . '/css/wp-admin.css' );
 }
-add_action('admin_head','beryl_admin_css');
+add_action( 'admin_enqueue_scripts', 'beryl_admin_scripts' );
 
 function beryl_tag_list( $post_id, $return = false ) {
 	$entry_utility = '';
@@ -273,8 +273,8 @@ function beryl_scripts() {
 
 	wp_enqueue_script( 'comment-reply' );
 
-	wp_enqueue_script( 'beryl-segment', get_template_directory_uri() . '/js/segment.min.js', array() );
-	wp_enqueue_script( 'beryl-ease', get_template_directory_uri() . '/js/ease.min.js', array() );
+	wp_enqueue_script( 'segment', get_template_directory_uri() . '/js/segment.min.js', array() );
+	wp_enqueue_script( 'ease', get_template_directory_uri() . '/js/ease.min.js', array() );
 
 	wp_enqueue_script( 'beryl-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20131209', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '20131209', true );
@@ -300,13 +300,6 @@ function beryl_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'beryl_scripts' );
-
-// Admin Javascript
-add_action( 'admin_enqueue_scripts', 'beryl_admin_scripts' );
-function beryl_admin_scripts() {
-	wp_register_script('beryl-master', get_template_directory_uri() . '/inc/js/admin-master.js', array('jquery'));
-	wp_enqueue_script('beryl-master');
-}
 
 if ( ! function_exists( 'beryl_the_attached_image' ) ) :
 	/**
@@ -405,41 +398,6 @@ function beryl_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'beryl_body_classes' );
 
-/**
- * Create a nicely formatted and more specific title element text for output
- * in head of document, based on current view.
- *
- * @since Beryl 1.0
- *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
- */
-function beryl_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() ) {
-		return $title;
-	}
-
-	// Add the site name.
-	$title .= get_bloginfo( 'name' );
-
-	// Add the site description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title = "$title $sep $site_description";
-	}
-
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'beryl' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-add_filter( 'wp_title', 'beryl_wp_title', 10, 2 );
-
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
 
@@ -466,7 +424,7 @@ function beryl_register_required_plugins() {
 	 */
 	$plugins = array(
 		array(
-			'name'     				=> 'Bootstrap 3 Shortcodes', // The plugin name
+			'name'     				=> __('Bootstrap 3 Shortcodes','beryl'), // The plugin name
 			'slug'     				=> 'bootstrap-3-shortcodes', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '3.3.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented

@@ -1,5 +1,18 @@
 Beryl changelog
 
+= Version 1.6 =
+* Removed back-compat.php
+* Updated TGM version
+* Load admin CSS/JS only where it's needed
+* Removed prefix from 3rd party libraries
+* Removed beryl_wp_title
+* Fixed some translations
+* Changed date to date_i18n
+* Use get_search_form to get search form
+* Removed beryl_paging_nav, beryl_post_nav
+* Changed sticky post background
+* Removed "General settings" panel registration
+
 = Version 1.5.1 =
 * Made some changes to admin rate notice
 

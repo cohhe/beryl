@@ -85,11 +85,7 @@ if (get_search_query() == '') {
 		</div>
 		<div class="main-navigation-container">
 			<div class="search-form">
-				<form action="<?php echo esc_url(home_url()); ?>" method="get">
-					<span class="sb-icon-search icon-search blue-button"></span>
-					<input type="text" name="s" onclick="clearInput(this, 'Search');" value="<?php echo esc_attr($search_string); ?>" />
-					<input type="submit" name="search" class="btn btn-primary sb-search-submit" value="<?php esc_attr(_e('Search', 'beryl')); ?>" />
-				</form>
+				<?php get_search_form(); ?>
 			</div>
 			<div id="middle-menu">
 				<?php

@@ -32,14 +32,6 @@ function beryl_customize_register( $wp_customize ) {
 
 	$wp_customize->get_section( 'header_image' )->title = __( 'Logo', 'beryl' );
 
-	// Add General setting panel and configure settings inside it
-	$wp_customize->add_panel( 'beryl_general_panel', array(
-		'priority'       => 250,
-		'capability'     => 'edit_theme_options',
-		'title'          => __( 'General settings' , 'beryl'),
-		'description'    => __( 'You can configure your general theme settings here' , 'beryl')
-	) );
-
 	// Social links
 	$wp_customize->add_section( new beryl_Customized_Section( $wp_customize, 'beryl_social_links', array(
 		'priority'       => 300,
