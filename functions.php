@@ -101,6 +101,11 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 		} else {
 			add_theme_support( 'custom-header' );
 		}
+
+		$custom_background_arg = array(
+			'default-color' => 'ffffff'
+		);
+		add_theme_support( "custom-background", $custom_background_arg );
 		
 	}
 endif; // beryl_setup

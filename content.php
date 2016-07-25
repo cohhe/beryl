@@ -39,6 +39,7 @@ if ( !empty($img) ) {
 					<?php beryl_tag_list( get_the_ID() ); ?>
 				</div>
 				<?php the_content(); ?>
+				<?php the_posts_navigation(); ?>
 				<?php comments_template( '/comments.php', true ); ?>
 				<?php
 					wp_link_pages( array(

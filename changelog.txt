@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.6.1 =
+* Fixed Theme Check issues
+
 = Version 1.6 =
 * Removed back-compat.php
 * Updated TGM version
