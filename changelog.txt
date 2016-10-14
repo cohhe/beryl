@@ -1,5 +1,14 @@
 Beryl changelog
 
+= Version 1.6.2 =
+* Fixed search notice
+* Fixed licence at style.css
+* Fixed theme uri
+* Added pagination
+* Fixed long title/description issue
+* Switched get_the_title() to the_title()
+* Fixed nested lists at footer widgets
+
 = Version 1.6.1 =
 * Fixed Theme Check issues
 
