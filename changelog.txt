@@ -1,5 +1,14 @@
 Beryl changelog
 
+= Version 1.6.3 =
+* Corrected search form
+* Fixed translation/language file
+* Escaped home url
+* Removed inline customizer style
+* Removed unnecessary js file
+* Unminified js files
+* Removed couple of templates, variables, actions
+
 = Version 1.6.2 =
 * Fixed search notice
 * Fixed licence at style.css

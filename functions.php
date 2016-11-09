@@ -82,7 +82,7 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'search-form', 'comment-form', 'comment-list',
+			'comment-form', 'comment-list',
 		) );
 
 		// This theme uses wp_nav_menu() in two locations.
@@ -294,7 +294,7 @@ function beryl_scripts() {
 		'beryl-script',
 		'beryl_loc',
 			array(
-				'home_url' => home_url()
+				'home_url' => esc_url(home_url())
 			)
 	);
 

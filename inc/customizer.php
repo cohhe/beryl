@@ -58,33 +58,7 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'beryl_Customized_
 			$classes = 'accordion-section control-section control-section-' . $this->type;
 			?>
 			<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
-				<style type="text/css">
-					.cohhe-social-profiles {
-						padding: 14px;
-					}
-					.cohhe-social-profiles li:last-child {
-						display: none !important;
-					}
-					.cohhe-social-profiles li i {
-						width: 20px;
-						height: 20px;
-						display: inline-block;
-						background-size: cover !important;
-						margin-right: 5px;
-						float: left;
-					}
-					.cohhe-social-profiles li a {
-						height: 20px;
-						line-height: 20px;
-					}
-					#customize-theme-controls>ul>#accordion-section-beryl_social_links {
-						margin-top: 10px;
-					}
-					.cohhe-social-profiles li.documentation {
-						text-align: right;
-						margin-bottom: 60px;
-					}
-				</style>
+
 				<ul class="cohhe-social-profiles">
 					<li class="documentation"><a href="http://documentation.cohhe.com/beryl" class="button button-primary button-hero" target="_blank"><?php _e( 'Documentation', 'beryl' ); ?></a></li>
 				</ul>
@@ -129,28 +103,7 @@ function beryl_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'beryl_customize_preview_js' );
 
-/**
- * Add contextual help to the Themes and Post edit screens.
- *
- * @since Beryl 1.0
- *
- * @return void
- */
-function beryl_contextual_help() {
-	if ( 'admin_head-edit.php' === current_filter() && 'post' !== $GLOBALS['typenow'] ) {
-		return;
-	}
-
-	get_current_screen()->add_help_tab( array(
-		'id'      => 'beryl',
-		'title'   => __( 'Beryl 1.0', 'beryl' ),
-		'content' =>
-			'<ul>' .
-				'<li>' . sprintf( __( 'The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by the <a href="%1$s">featured</a> tag; you can change the tag and layout in <a href="%2$s">Appearance &rarr; Customize</a>. If no posts match the tag, <a href="%3$s">sticky posts</a> will be displayed instead.', 'beryl' ), admin_url( '/edit.php?tag=featured' ), admin_url( 'customize.php' ), admin_url( '/edit.php?show_sticky=1' ) ) . '</li>' .
-				'<li>' . sprintf( __( 'Enhance your site design by using <a href="%s">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Beryl 1.0 uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page.', 'beryl' ), 'http://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail' ) . '</li>' .
-				'<li>' . sprintf( __( 'For an in-depth tutorial, and more tips and tricks, visit the <a href="%s">Beryl 1.0 documentation</a>.', 'beryl' ), 'http://codex.wordpress.org/Beryl' ) . '</li>' .
-			'</ul>',
-	) );
+function beryl_customizer_style() {
+	wp_enqueue_style( 'beryl-customizer-css', get_template_directory_uri() . '/inc/css/customizer.css', array() );
 }
-add_action( 'admin_head-themes.php', 'beryl_contextual_help' );
-add_action( 'admin_head-edit.php',   'beryl_contextual_help' );
+add_action( 'customize_controls_print_styles', 'beryl_customizer_style' );

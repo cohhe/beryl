@@ -13,8 +13,6 @@
 
 get_header();
 
-global $beryl_layout_type;
-
 ?>
 
 <div id="main-content" class="main-content ">

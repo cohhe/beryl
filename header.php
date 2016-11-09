@@ -60,7 +60,6 @@ if (get_search_query() == '') {
 
 ?>
 <body <?php body_class(); ?>>
-<?php do_action('ase_theme_body_inside_top'); ?>
 <div id="page" class="hfeed site">
 	<div id="main" class="site-main container">
 		<div class="post-pagination"><?php echo beryl_get_pagination( $GLOBALS['wp_query']->post_count ); ?></div>
@@ -114,5 +113,5 @@ if (get_search_query() == '') {
 		<div class="scroll-down-container">
 			<span class="scroll-down"></span>
 		</div>
-		<div class="main-copyright">Theme by <a href="https://cohhe.com" target="_blank">Cohhe</a>.</div>
+		<div class="main-copyright"><?php _e('Theme by', 'beryl'); ?> <a href="https://cohhe.com" target="_blank">Cohhe</a>.</div>
 		<input type="hidden" id="current-page-url" value="">
