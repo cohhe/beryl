@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.6.4 =
+* Corrected theme URI
+
 = Version 1.6.3 =
 * Corrected search form
 * Fixed translation/language file
