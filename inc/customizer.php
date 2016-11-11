@@ -30,8 +30,6 @@ function beryl_customize_register( $wp_customize ) {
 	// Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
 	$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title &amp; Tagline', 'beryl' );
 
-	$wp_customize->get_section( 'header_image' )->title = __( 'Logo', 'beryl' );
-
 	// Social links
 	$wp_customize->add_section( new beryl_Customized_Section( $wp_customize, 'beryl_social_links', array(
 		'priority'       => 300,

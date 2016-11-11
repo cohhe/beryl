@@ -26,6 +26,10 @@ GLYPHICONS, Copyright 2010 - 2015 Jan Kovařík
 GLYPHICONS is licensed under the GPLv3.0
 Source: http://glyphicons.com
 
+Font Awesome, Dave Gandy
+Font Awesome is licensed under the MIT license
+Source: http://fontawesome.io/
+
 Bootstrap, Copyright 2015 Twitter
 Bootstrap is released under the MIT license
 Source: http://getbootstrap.com
@@ -52,3 +56,6 @@ Source: http://benalman.com/projects/jquery-hashchange-plugin/
 
 Used images in screenshot.png, licensed under CC0 Public Domain, free for commercial use / no attribution required
 https://pixabay.com/en/girl-summer-dress-pretty-woman-571808/
+
+post-bg.png is licensed under CC BY-SA 3.0
+http://subtlepatterns.com/inspiration-geometry/

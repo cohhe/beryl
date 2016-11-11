@@ -1,5 +1,19 @@
 Beryl changelog
 
+= Version 1.6.4 =
+* Changed load_theme_textdomain attribute
+* Escaped search form placeholder
+* Increased sticky post background a bit
+* ie.css is loaded if lt IE 9
+* Added option font license information
+* Added post-bg.png license
+* Removed some tags from style.css
+* Removed get_post_format call
+* Fixed content excerpt
+* Fixed translation issue
+* improved mobile view 
+
+
 = Version 1.6.3 =
 * Corrected search form
 * Fixed translation/language file

@@ -23,7 +23,7 @@ get_header();
 				 * (where ___ is the post format) and that will be used instead.
 				 */
 
-				get_template_part( 'content', get_post_format() ? get_post_format() : get_post_type() );
+				get_template_part( 'content', get_post_type() );
 
 			endwhile;
 		?>

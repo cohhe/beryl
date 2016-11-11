@@ -64,7 +64,7 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 		 * replace to change 'beryl' to the name of your theme in all
 		 * template files.
 		 */
-		load_theme_textdomain( 'beryl', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'beryl' );
 
 		// This theme styles the visual editor to resemble the theme style.
 		add_editor_style( array( 'css/editor-style.css' ) );
@@ -82,7 +82,7 @@ if ( ! function_exists( 'beryl_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'comment-form', 'comment-list',
+			'comment-list',
 		) );
 
 		// This theme uses wp_nav_menu() in two locations.
@@ -273,7 +273,7 @@ function beryl_scripts() {
 	wp_enqueue_style( 'beryl-style', get_stylesheet_uri(), array( 'genericons' ) );
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'beryl-ie', get_template_directory_uri() . '/css/ie.css', array( 'beryl-style', 'genericons' ), '20131205' );
+	wp_enqueue_style( 'beryl-ie', get_template_directory_uri() . '/css/ie.css', array( 'beryl-style', 'genericons' ), '' );
 	wp_style_add_data( 'beryl-ie', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'comment-reply' );

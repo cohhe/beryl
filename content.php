@@ -24,7 +24,7 @@ if ( !empty($img) ) {
 		<div class="post-left-content">
 			<div class="post-left-inner">
 				<h1 class="post-title"><?php the_title(); ?></h1>
-				<div class="post-excerpt"><?php echo get_the_excerpt(); ?></div>
+				<div class="post-excerpt"><?php the_excerpt(); ?></div>
 				<a href="<?php the_permalink(); ?>" class="post-read-more icon-angle-right"><?php _e('Read more', 'beryl'); ?></a>
 			</div>
 		</div>
@@ -57,7 +57,7 @@ if ( !empty($img) ) {
 							<?php dynamic_sidebar( 'sidebar-1' ); ?>
 						</div><!-- #footer-sidebar -->
 					<?php } ?>
-					<div class="post-copyright">&copy; <?php echo date_i18n('Y') ?> <a href="https://cohhe.com" target="_blank">Cohhe Themes</a>. All rights reserved.</div>
+					<div class="post-copyright">&copy; <?php echo date_i18n('Y') ?> <a href="https://cohhe.com" target="_blank">Cohhe Themes</a>. <?php _e('All rights reserved.', 'beryl'); ?></div>
 				</div>
 			</div>
 		</div>
