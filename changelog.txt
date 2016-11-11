@@ -1,6 +1,6 @@
 Beryl changelog
 
-= Version 1.6.4 =
+= Version 1.6.5 =
 * Changed load_theme_textdomain attribute
 * Escaped search form placeholder
 * Increased sticky post background a bit
@@ -13,6 +13,8 @@ Beryl changelog
 * Fixed translation issue
 * improved mobile view 
 
+= Version 1.6.4 =
+* Corrected theme URI
 
 = Version 1.6.3 =
 * Corrected search form
