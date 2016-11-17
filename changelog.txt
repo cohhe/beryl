@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.6.6 =
+* Changed the post-bg.png file and license
+
 = Version 1.6.5 =
 * Changed load_theme_textdomain attribute
 * Escaped search form placeholder

@@ -1,4 +1,4 @@
-Beryl, Copyright 2015 Cohhe
+﻿Beryl, Copyright 2015 Cohhe
 Beryl is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -57,5 +57,5 @@ Source: http://benalman.com/projects/jquery-hashchange-plugin/
 Used images in screenshot.png, licensed under CC0 Public Domain, free for commercial use / no attribution required
 https://pixabay.com/en/girl-summer-dress-pretty-woman-571808/
 
-post-bg.png is licensed under CC BY-SA 3.0
-http://subtlepatterns.com/inspiration-geometry/
+post-bg.png is licensed under CC0 Public Domain, free for commercial use / no attribution required
+hhttps://pixabay.com/en/paisley-floral-flourish-decorative-1769549/
