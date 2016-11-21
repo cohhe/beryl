@@ -272,10 +272,6 @@ function beryl_scripts() {
 	// Load our main stylesheet.
 	wp_enqueue_style( 'beryl-style', get_stylesheet_uri(), array( 'genericons' ) );
 
-	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'beryl-ie', get_template_directory_uri() . '/css/ie.css', array( 'beryl-style', 'genericons' ), '' );
-	wp_style_add_data( 'beryl-ie', 'conditional', 'lt IE 9' );
-
 	wp_enqueue_script( 'comment-reply' );
 
 	wp_enqueue_script( 'segment', get_template_directory_uri() . '/js/segment.min.js', array() );
