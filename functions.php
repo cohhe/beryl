@@ -477,13 +477,21 @@ function beryl_register_required_plugins() {
 add_action( 'tgmpa_register', 'beryl_register_required_plugins' );
 
 function beryl_admin_rating_notice() {
+	if ( !file_exists(get_template_directory()."/rating_notice.txt") ) {
+		return;
+	}
 	$current_screen = get_current_screen();
 	$user = wp_get_current_user();
 
 	if ( $current_screen->parent_base != 'themes' ) {
 		return;
 	}
-	if ( get_option('beryl_rating_notice') && get_option('beryl_rating_notice') != 'hide' && time() - get_option('beryl_rating_notice') > 432000 ) { ?>
+
+	$rating_file = fopen(get_template_directory()."/rating_notice.txt", "r");
+	$rating_timestamp = fread($rating_file,filesize(get_template_directory()."/rating_notice.txt"));
+	fclose($rating_file);
+
+	if ( get_option('beryl_rating_notice', 'show') == 'show' && time() - intval($rating_timestamp) > 432000 ) { ?>
 		<div class="beryl-rating-notice">
 			<span class="beryl-notice-left">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-square.png" alt="">
@@ -512,8 +520,10 @@ function beryl_dismiss_rating_notice() {
 add_action( 'wp_ajax_beryl_dismiss_notice', 'beryl_dismiss_rating_notice' );
 
 function beryl_theme_activated() {
-	if ( !get_option('beryl_rating_notice') ) {
-		update_option('beryl_rating_notice', time());
+	if ( !file_exists(get_template_directory()."/rating_notice.txt") ) {
+		$rating_file = fopen(get_template_directory()."/rating_notice.txt", "w");
+		fwrite($rating_file, time());
+		fclose($rating_file);
 	}
 }
 add_action('after_switch_theme', 'beryl_theme_activated');
