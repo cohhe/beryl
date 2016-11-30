@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.6.9 =
+* Changed to wp_filesystem from direct PHP functions
+
 = Version 1.6.8 =
 * Save rating timestamp in txt file
 

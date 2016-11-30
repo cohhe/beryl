@@ -487,11 +487,16 @@ function beryl_admin_rating_notice() {
 		return;
 	}
 
-	$rating_file = fopen(get_template_directory()."/rating_notice.txt", "r");
-	$rating_timestamp = fread($rating_file,filesize(get_template_directory()."/rating_notice.txt"));
-	fclose($rating_file);
+	global $wp_filesystem;
 
-	if ( get_option('beryl_rating_notice', 'show') == 'show' && time() - intval($rating_timestamp) > 432000 ) { ?>
+	if ( !WP_Filesystem() ) {
+		request_filesystem_credentials(wp_nonce_url('themes.php','beryl-rating-notice'), '', true, false, null);
+		return;
+	}
+
+	$rating_timestamp = $wp_filesystem->get_contents(get_template_directory()."/rating_notice.txt");
+
+	if ( $rating_timestamp !== false && get_option('beryl_rating_notice', 'show') == 'show' && time() - intval($rating_timestamp) > 432000 ) { ?>
 		<div class="beryl-rating-notice">
 			<span class="beryl-notice-left">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-square.png" alt="">
@@ -521,9 +526,16 @@ add_action( 'wp_ajax_beryl_dismiss_notice', 'beryl_dismiss_rating_notice' );
 
 function beryl_theme_activated() {
 	if ( !file_exists(get_template_directory()."/rating_notice.txt") ) {
-		$rating_file = fopen(get_template_directory()."/rating_notice.txt", "w");
-		fwrite($rating_file, time());
-		fclose($rating_file);
+		global $wp_filesystem;
+
+		require_once(ABSPATH . 'wp-admin/includes/file.php');
+
+		if ( !WP_Filesystem() ) {
+			request_filesystem_credentials(wp_nonce_url('themes.php','beryl-rating-notice'), '', true, false, null);
+			return;
+		}
+
+		$wp_filesystem->put_contents(get_template_directory()."/rating_notice.txt",time());
 	}
 }
 add_action('after_switch_theme', 'beryl_theme_activated');
