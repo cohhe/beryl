@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.6.9.1 =
+* Reverted back to saving timestamp in the database
+
 = Version 1.6.9 =
 * Changed to wp_filesystem from direct PHP functions
 
