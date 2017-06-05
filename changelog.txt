@@ -1,5 +1,8 @@
 Beryl changelog
 
+= Version 1.6.9.2 =
+* Checked WordPress 4.8 compatibility
+
 = Version 1.6.9.1 =
 * Reverted back to saving timestamp in the database
 
